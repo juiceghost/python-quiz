@@ -32,20 +32,70 @@
 # Add more functionality later
 
 
-questions = ["I always take the lead in group assignments", "I always finish my assignments on time", "Helping others succeed is more important than my own success", "I work a lot on the side with other things than studies", "I like to tinker with hardware"]
-scale = "1 = Not true at all, 7 = Extremely true\nλ "
-answers = []
-feedback = []
+class Person:
+    questions = [
+        "I always take the lead in group assignments: ",
+        "I always finish my assignments on time: ",
+        "Helping others succeed is more important than my own success: ",
+        "I work a lot on the side with other things than studies: ",
+        "I like to tinker with hardware: "
+    ]
 
-print("Welcome to the Interactive Quiz v0.2\n====================================\n\n")
-print("How well does the following statements apply to you?\n")
-# iterera genom questions och printa varje sträng
-for question in questions:
-    print(question)
-    #print(scale)
-    #answers = [5,int(input(scale)),9]
-    #print(answers)
-    answers.append(int(input(scale)))
+    @staticmethod
+    def check_result(user_input, message):
+        if user_input == 1:
+            return message[0]
+        elif user_input == 7:
+            return message[1]
+        else:
+            return message[2]
+
+    def check_question_1(self):
+        doc_answer = [
+            "You never take the lead in group assignments",
+            "You always take the lead in group assignments",
+            "You sometimes take the lead in group assignments"
+        ]
+        return Person.check_result(person.answers['1'], message=doc_answer)
+
+    def check_question_2(self):
+        doc_answer = [
+            "You never finish your assignments on time",
+            "You always finish your assignments on time",
+            "You sometimes finish your assignments on time"
+        ]
+        return Person.check_result(person.answers['2'], message=doc_answer)
+
+    def check_question_3(self):
+        doc_answer = [
+            "Helping others succeed is never more important than your own success",
+            "Helping others succeed is always more important than your own success",
+            "Helping others succeed is sometimes more important than your own success"
+        ]
+        return Person.check_result(person.answers['3'], message=doc_answer)
+
+    def check_question_4_and_5(self):
+        other_time = person.answers['4'] * 2.5 + person.answers['5'] * 0.75
+        if (3.25 <= other_time <= 8.24):
+            return "You probably have enough time for your studies"
+        elif (8.25 <= other_time <= 13.24): \
+            return "You might want to increase time spent on studies"
+        else:
+            return "You definitely want to increase time spent on studies"
+
+person = Person()
+person.answers = {}
+
+print("1 = Not true at all, 7 = Extremely true\n ")
+for index, item in enumerate(person.questions, 1):
+    user_input = int(input(item))
+    person.answers.update({f'{index}': user_input})
+
+print(person.answers)
+print(person.check_question_1())
+print(person.check_question_2())
+print(person.check_question_3())
+print(person.check_question_4_and_5())
 
 # Give the user a result whether he/she takes the lead in group assignments (always, sometimes, never)
 

@@ -1,7 +1,7 @@
 # Interactive quiz 16/11 2021 
 
 # Which Avenger are you? Build a personality or recommendation quiz which asks users some questions, stores their answers, and then perform some kind of calculation to give the user a personalized end result that's based on their answers
-print("Welcome to this ineractive quiz\nWho among the Avengers are you?\n Iron Man\nCaptain America\nHulken\nThor\nBlack Widow\nHawkeye.")
+print("Welcome-to this ineractive quiz\nWho among the Avengers are you?\n Iron Man\nCaptain America\nHulken\nThor\nBlack Widow\nHawkeye.")
 
 # Ask the user some questions
 questions = ["How much do you like really tight tights?", "How patriotic are you?", "How much anger managment do you need?", "How do you go to work?", "How rich are you?",

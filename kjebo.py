@@ -63,3 +63,5 @@ mid=(sum(score)) / len(questions)
 #Skriv ut det element som motsvarar det tal variabeln mid har ex. print(barbs[1])
 print(f'Du är {barbs[round(mid) - 1]}')
 #print(menu)
+##
+

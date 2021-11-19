@@ -40,5 +40,5 @@ score = []
 main()
 
 mid = sum(score) / len(questions)
-#print(mid)
 print(f'You are {result[round(mid) - 1]}')
+

@@ -21,6 +21,7 @@ def scoring():
 
 
 def call_error():
+    '''raise an error'''
     print("Error! Try again.")
 
 

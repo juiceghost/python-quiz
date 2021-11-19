@@ -1,26 +1,6 @@
-# Interactive quiz 16/11 2021 
-
-# Which Avenger are you? Build a personality or recommendation quiz which asks users some questions, stores their answers, and then perform some kind of calculation to give the user a personalized end result that's based on their answers
-
-# Ask the user some questions
-#  
-# Store their answers
-# Perform some kind of calculation
-# Give the user a personalized end result (based on their answers)
-
-# Inputs
-# Användaren lämnar svar på frågor
-
-# Outputs
-# Programmet ställer frågor till användaren
-# Efter beräkning ges användaren sitt resultat
-
-
-# "What is your favourite color? ": ["Green", "Food", "Yellow", "Yeah..."],
-
+'''python quiz v.0.1.0'''
 def main():
-    #print(questions)
-    #print(questions.items())
+    '''main function'''
     for key, value in questions.items():
         print(f'{key}\n')
         for idx, i in enumerate(value):
@@ -39,6 +19,7 @@ def scoring():
 
 
 def call_error():
+    '''raise an error'''
     print("Error! Try again.")
 
 
@@ -51,11 +32,10 @@ questions = {
     }
 
 result = ["Hulken", "Bulken", "Clownen Manne", "John McClane"]
-
 score = []
 
 main()
 
 mid = sum(score) / len(questions)
-#print(mid)
 print(f'You are {result[round(mid) - 1]}')
+

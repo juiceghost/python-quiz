@@ -1,22 +1,3 @@
-# Interactive quiz 16/11 2021 
-
-# Which Avenger are you? Build a personality or recommendation quiz which asks users some questions, stores their answers, and then perform some kind of calculation to give the user a personalized end result that's based on their answers
-
-# Ask the user some questions
-#  
-# Store their answers
-# Perform some kind of calculation
-# Give the user a personalized end result (based on their answers)
-
-# Inputs
-# Användaren lämnar svar på frågor
-
-# Outputs
-# Programmet ställer frågor till användaren
-# Efter beräkning ges användaren sitt resultat
-
-
-# "What is your favourite color? ": ["Green", "Food", "Yellow", "Yeah..."],
 
 def main():
     #print(questions)

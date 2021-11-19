@@ -1,5 +1,6 @@
 '''python quiz v.0.1.0'''
 def main():
+    '''main function'''
     #print(questions)
     #print(questions.items())
     for key, value in questions.items():

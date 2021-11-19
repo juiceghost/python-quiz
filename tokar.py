@@ -34,7 +34,6 @@ questions = {
     }
 
 result = ["Hulken", "Bulken", "Clownen Manne", "John McClane"]
-
 score = []
 
 main()

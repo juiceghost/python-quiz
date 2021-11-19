@@ -1,4 +1,4 @@
-'''python quiz'''
+'''python quiz v.0.1.0'''
 def main():
     #print(questions)
     #print(questions.items())

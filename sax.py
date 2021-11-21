@@ -40,7 +40,7 @@ question = ["I always take the lead in group assignments", "I always finish my a
 my_function(question)
 
 #print("Welcome to the Interactive Quiz v0.1")
-#d
+#
 
 
 

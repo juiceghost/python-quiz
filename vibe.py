@@ -1,8 +1,9 @@
+
 #Function
-def vibe(1, 2, 3, 4):
-	return f"For {1}, and {2}, or {3} or {4}"
+def vibe(one, two, three, four):
+	return f"For {one}, and {two}, or {three} or {four}"
 
 
-vibe("You", "Me", "Them", "Us")
+print(vibe("You", "Me", "Them", "Us"))
 
 #Now it works

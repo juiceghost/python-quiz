@@ -33,3 +33,9 @@ def run_test(questions):
 
 run_test(questions)
 print("=========================================================")
+
+
+#L33tH4xor
+string = input ("Copy and paste the down below text string: \n Diet coke for breakfirst \n Paste here: ")
+new_string= string.replace("a", "4").replace("b", "8").replace("e", "3")
+print("This is your new string text: \n\n "+ new_string)

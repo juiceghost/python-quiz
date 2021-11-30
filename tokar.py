@@ -1,41 +1,20 @@
-'''python quiz v.0.1.0'''
-def main():
-    '''main function'''
-    for key, value in questions.items():
-        print(f'{key}\n')
-        for idx, i in enumerate(value):
-            print(f'{idx + 1}: {i}')
-        scoring()
+
+def speak_to_leet(trans_str: str) -> str:
+    char = "abelost"
+    leet = "4831057"
+    char_to_leet = trans_str.maketrans(char, leet)
+    return trans_str.translate(char_to_leet)
 
 
-def scoring():
-    while True:
-        answer = input(">>> ")
-        if answer.isnumeric() and int(answer) < 5:
-            score.append(int(answer))
-            break
-        else:
-            call_error()
+def leet_to_speak(trans_str: str) -> str:
+    char = "abelost"
+    leet = "4831057"
+    leet_to_char = trans_str.maketrans(leet, char)
+    return trans_str.translate(leet_to_char)
 
 
-def call_error():
-    '''raise an error'''
-    print("Error! Try again.")
-
-
-questions = {
-    "What is your favourite color? ": ["Green", "Food", "Yellow", "Yeah..."],
-    "What is your favourite food?  ": ["Baked beans", "Food", "Banan", "Aspirins"],
-    "How do you react on stress? ": ["I'll kill you", "Food", "Stress?", "That's gonna wake the neighbors"],
-    "Would you say the glass is half full or half empty? ": ["Empty", "Food", "Half full", "All right, that's enough of this kung-fu shit!"],
-    "How do you spend your vacation? ": ["Alone in the dark", "Food", "Being happy!", "Hey Carmine, let me ask you something: what sets off a metal detector first? The lead in your ass or the shit in your brains?"]
-    }
-
-result = ["Hulken", "Bulken", "Clownen Manne", "John McClane"]
-score = []
-
-main()
-
-mid = sum(score) / len(questions)
-print(f'You are {result[round(mid) - 1]}')
-
+def translate():
+    input_str = input("Enter some text: ")
+    print(speak_to_leet(input_str))
+    input_str = input("3n73r 50m3 73x7: ")
+    print(leet_to_speak(input_str))

@@ -1,9 +1,8 @@
+import pathlib
 
-#Function
-def vibe(one, two, three, four):
-	return f"For {one}, and {two}, or {three} or {four}"
+path = pathlib.Path.home()
+
+print(path)
 
 
-print(vibe("You", "Me", "Them", "Us"))
-
-#Now it works
+what

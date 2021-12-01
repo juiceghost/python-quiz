@@ -34,10 +34,31 @@ def quiz():
         print("Cocker Spaniel")
 
 
+def tempcalc():
+
+    def convert_cel_to_far():
+        celsius = float(input("Enter a temperature in degrees C: "))
+        far = float(celsius * 9/5 + 32)
+        far = round(far, 2)
+        print(str(celsius) + " Degrees C is " + str(far) + " degrees F")
+
+    def convert_far_to_cel():
+        farenheit = float(input("Enter a temperature in degrees F: "))
+        cel = float((farenheit - 32) * 5/9)
+        cel = round(cel, 2)
+        print(str(farenheit) + " Degrees C is " + str(cel) + " degrees F")
+
+    convert_cel_to_far()
+    convert_far_to_cel()
+
+
 while True:
-    coice = input("Vad vill du göra? 1 = Leet Speak 2 = Quiz")
+    coice = input(
+        "Vad vill du göra? 1 = Leet Speak 2 = Quiz 3 = Celsius och Farenheitkalkylator ")
 
     if coice == "1":
         leetspeak()
     if coice == "2":
         quiz()
+    if coice == "3":
+        tempcalc()

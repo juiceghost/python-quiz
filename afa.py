@@ -1,3 +1,39 @@
+# Challenge: Track Your Investments
+
+
+def invest( amount, rate):
+    investing =  (amount * rate )
+    return (investing)
+i = 1
+rate = float(input("What is the annual rate of return?: "))
+amount = float(input("How much monny you want to invest in $ ? :"))
+years = int(input("How many years you want to invest your money? : "))
+for i in range(1,years+1):
+    amount = invest (amount, rate) + amount
+    print ("year" f'{i} : ${amount:.2f}')
+    i=i + 1
+
+# challenge-convert temperatures
+
+""" convert celsius to farenheit """
+
+def temperature_far(celsius):
+    farenheit = celsius * (9 / 5) + 32
+    return farenheit
+
+celsius = input("ENter a temperature in degrees C: ")
+print(f'{celsius} degrees C = {temperature_far(float(celsius))} degrees F') 
+
+""" convert farenheit to celsius """
+
+def temperature_cel(farenheit):
+    celsius = (farenheit - 32 )*(5 / 9)
+    return celsius   
+print("=======================================")   
+farenheit = input("ENter a temperature in degrees F: ")
+print(f'{farenheit} degrees F = {temperature_cel(float(farenheit))} degrees C')
+
+
 # Interactive quiz 16/11 2021 
 
 # Which Avenger are you? Build a personality or recommendation quiz which asks users some questions, stores their answers, and then perform some kind of calculation to give the user a personalized end result that's based on their answers

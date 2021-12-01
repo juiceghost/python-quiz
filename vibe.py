@@ -1,5 +1,6 @@
 from pathlib import Path
 
+<<<<<<< HEAD
 
 # Creates and appends a hash of the password entered in a "hash" file
 def passwd(name, password):
@@ -8,8 +9,17 @@ def passwd(name, password):
     passwd_file.touch(exist_ok=True)
     with passwd_file.open(mode="a", encoding="utf-8") as file:
         file.write(f"{name}\n" + str(hash(password)) + "\n")
+=======
+"""
+Review Exercises Chapter 12.2
 
+1. Create a new Path object to a file called my_file.txt in a folder called my_folder/
+ in your computer’s home directory. Assign this Path object to the variable name file_path.
+>>>>>>> 67aa1a935aba43dde3ba9e135e3182d66b762d90
 
+2. Check whether the path assigned to file_path exists.
+
+<<<<<<< HEAD
 # Function made to add the employee to the "employees.txt" file:
 # Also creates and appends the information with a framed format
 # Example:
@@ -49,6 +59,21 @@ while True:
             print("Date of birth entered in the wrong format...")
     except NameError:
         print("Wrong!")
+=======
+3. Print the name of the path assigned to file_path. The output
+should be my_file.txt.
+
+4. Print the name of the parent directory of the path assigned to
+file_path. The output should be my_folder.
+"""
+file_path = Path.home() / "my_folder/my_file.txt"
+
+print(file_path.exists())
+
+print(file_path.name)
+
+print(file_path.parent)
+>>>>>>> 67aa1a935aba43dde3ba9e135e3182d66b762d90
 
 # User gets to input a password for said employee (Only as an additional function of the script)
 password = input(str("Enter a password for the employee: "))
@@ -60,6 +85,7 @@ if employee.find(" "):
 else:
     employee_email = f"{employee}@chaffteam.se"
 
+<<<<<<< HEAD
 # Converts the name of the employee to create a working directory for said employee:
 employee_dir = employee.replace(" ", "_")
 path = Path.home() / f"My_company/employees/{employee_dir}"
@@ -77,3 +103,6 @@ else:
     print("Employee not added to files...")
 
 
+=======
+
+>>>>>>> 67aa1a935aba43dde3ba9e135e3182d66b762d90

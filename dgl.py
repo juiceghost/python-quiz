@@ -1,61 +1,7 @@
-# L33t H4x0r
-"""
-a -> 4
-b -> 8
-e -> 3
-l -> 1
-o -> 0
-s -> 5
-t -> 7
-"""
-
-
-# import sto
-# print(sto.translate('leet'))
-# import tokar
-# tokar.translate()
-# import kjebo
-# kjebo.translate()
-#import thor
-# thor.main()
-
-
-def translate():
-    # print("L33t H4x0r Tr4n514t0r")
-    user_string = input("Enter some text: ")
-    # print(string.replace('a', '4').replace(
-    #    'e', '3').replace('l', '1').replace('t', '7'))
-
-    # Denna funktion ska göra samma sak som challengen MEN
-    # utan att använda replace, translate, make_trans
-    # lösningen SKA använda en lista av tuples samt find
-    # "leet" -> "1337"
-
-    def replace(string, old, new):
-        # ersätt alla förekomster av old i stränger string med new
-        # vi ska använda .find
-        # loopa igenom string med hjälp av find
-        # när find returnerar -1 är samtliga förekomster utbytta
-        index = 0
-        while string.find(old, index) > -1:
-            found = string.find(old, index)
-            string = string[:found] + new + string[found + 1:]
-            index = found + 1
-        return string
-
-    trans_table = [('a', '4'), ('b', '8'), ('e', '3'),
-                   ('l', '1'), ('o', '0'), ('s', '5'), ('t', '7')]
-    for item in trans_table:
-        # print(f'type: {type(item)} value0: {item[0]} value1: {item[1]}')
-        user_string = replace(user_string, item[0], item[1])
-    print(user_string)
-
-
-translate()
-# fråga usern om en sträng, spara i en variabel
-# utför utbyte av strängar enligt ovanstående mall
-# printa ut resultatet för usern
-
+# 1337
+my_text = input("Enter some text: ")
+my_text = my_text.replace("a", "4")
+print(my_my_text)
 
 # review excercise 2:
 """
@@ -63,8 +9,7 @@ samantha = "Somebody said something to Samantha."
 result = samantha.replace("s", "x")
 result = result.replace("S", "X")
 print(result)
-
- """
+"""
 
 
 def quiz():
@@ -113,7 +58,7 @@ def quiz():
     for question in questions:
         print(question)
         # print(scale)
-        # answers = [5,int(input(scale)),9]
+        #answers = [5,int(input(scale)),9]
         # print(answers)
         answers.append(int(input(scale)))
 
@@ -153,6 +98,13 @@ def quiz():
 
     if(3.25 <= other_time <= 8.24):
         feedback.append("You probably have enough time for your studies")
+    elif(8.25 <= other_time <= 13.24):
+        feedback.append("You might want to increase time spent on studies")
+    else:
+        feedback.append(
+            "You definitely want to increase time spent on studies")
+
+    print(feedback)
     elif(8.25 <= other_time <= 13.24):
         feedback.append("You might want to increase time spent on studies")
     else:

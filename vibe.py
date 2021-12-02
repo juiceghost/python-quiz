@@ -29,6 +29,9 @@ def register(name, d8_of_birth, email):
         file.write(" " + ("-" * len(str(lst))) + "\n")
 
 
+my_company = Path.home() / "My_company/employees"
+if not my_company.exists():
+    my_company.mkdir()
 # Starting adding the employee with a simple input
 employee = input(str("Name of employee: "))
 

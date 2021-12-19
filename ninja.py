@@ -1,4 +1,4 @@
-#Review Exercises
+#Review Exercises!
 
 #2,
 #the_string = "Somebody said something to Samantha."
@@ -58,5 +58,3 @@ def convert_far_to_cel(F):
     print(f'{F} degrees F = {round(C, 2)} degrees C')
     return C
 convert_far_to_cel(F=float(input("Please enter a temperature in Fahrenheit degrees: ")))
-
-

@@ -51,12 +51,12 @@ def convert_cel_to_far(C):
     F = C * 9/5 + 32
     print(f'{C} degrees C = {round(F, 2)} degrees F')
     return F
-convert_cel_to_far(C=float(input("Enter a temperature in Celsius degrees: ")))
+convert_cel_to_far(C=float(input("Please enter a temperature in Celsius degrees: ")))
 
 def convert_far_to_cel(F):
     C = (F - 32) * 5/9
     print(f'{F} degrees F = {round(C, 2)} degrees C')
     return C
-convert_far_to_cel(F=float(input("Enter a temperature in Fahrenheit degrees: ")))
+convert_far_to_cel(F=float(input("Please enter a temperature in Fahrenheit degrees: ")))
 
 
